@@ -58,6 +58,24 @@ app.get('/weather', (req, res) => {
     })
 })
 
+// 404 help page
+app.get('/help/*', (req, res) => {
+    res.render('404', {
+        title: '404 Help',
+        name: 'Mayank',
+        errorMessage: 'Help page not found...'
+    })
+})
+
+// 404 page
+app.get('*', (req, res) => {
+    res.render('404', {
+        title: '404',
+        errorMessage: '404, page not found...',
+        name: 'Mayank'
+    })
+})
+
 //  ** ----------------------------------------------------------------------------
 
 app.listen(3000, () => {
