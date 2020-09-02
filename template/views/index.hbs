@@ -4,7 +4,6 @@
 <head>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" href="./img/weather.png">
-    <script src="./js/app.js"></script>
     <title>
         Weather
     </title>
@@ -13,10 +12,19 @@
 <body>
     <div class="main-content">
         {{> header}}
+
         <p>Your weather will be here...</p>
+
+        <form>
+            <input placeholder="Location">
+            <button>Search</button>
+        </form>
+
     </div>
 
     {{> footer}}
+    
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
